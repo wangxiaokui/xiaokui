@@ -86,7 +86,7 @@
 ////    textures. These texture caches provide you with a way to directly read and write buffers with various pixel formats, such as 420v or BGRA, from GL ES.
 //    CVOpenGLESTextureCacheCreate(kCFAllocatorDefault, NULL, self.mContext, NULL, &coreVideoTextureCache);
 //    
-//    UIImage *image = [UIImage imageNamed:@"for_test.jpg"];
+//    UIImage *image = [UIImage imageNamed:@"for_test.png"];
 //    renderTarget = [self pixelBufferFromCGImage:image.CGImage];
 //    
 //    
@@ -110,7 +110,7 @@
 //    
 //    
 ////    //纹理贴图
-//    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"for_test" ofType:@"jpg"];
+//    NSString* filePath = [[NSBundle mainBundle] pathForResource:@"for_test" ofType:@"png"];
 //    NSDictionary* options = [NSDictionary dictionaryWithObjectsAndKeys:@(1), GLKTextureLoaderOriginBottomLeft, nil];//GLKTextureLoaderOriginBottomLeft 纹理坐标系是相反的
 //    GLKTextureInfo* textureInfo = [GLKTextureLoader textureWithContentsOfFile:filePath options:options error:nil];
 //    //着色器
@@ -164,7 +164,7 @@
     //    •	第六个参数表示我们的位置数据在缓冲区起始位置的偏移量。
         glVertexAttribPointer(GLKVertexAttribTexCoord0, 2, GL_FLOAT, GL_FALSE, sizeof(GLfloat) * 5, (GLfloat *)NULL + 3);
     
-        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"for_test" ofType:@"jpg"];
+        NSString* filePath = [[NSBundle mainBundle] pathForResource:@"for_test" ofType:@"png"];
         NSDictionary* options = [NSDictionary dictionaryWithObjectsAndKeys:@(1), GLKTextureLoaderOriginBottomLeft, nil];//GLKTextureLoaderOriginBottomLeft 纹理坐标系是相反的
         GLKTextureInfo* textureInfo = [GLKTextureLoader textureWithContentsOfFile:filePath options:options error:nil];
         //着色器
